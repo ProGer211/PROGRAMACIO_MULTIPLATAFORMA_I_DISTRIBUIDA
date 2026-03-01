@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Juego de Memoria</title>
+  <script src="jquery-3.7.1.min.js"></script>
+  <script src="memory.js"></script>
+  <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+  <div id="controls">
+    <label for="difficulty">Nivel de dificultad:</label>
+    <select id="difficulty">
+      <option value="8">Fácil (8 cartas)</option>
+      <option value="12" selected>Medio (12 cartas)</option>
+      <option value="16">Difícil (16 cartas)</option>
+    </select>
+    <button id="start">Iniciar partida</button>
+  </div>
+
+  <div id="info">
+    <span>Tiempo: <span id="timer">0</span> s</span>
+    <span> |  Movimientos: <span id="moves">0</span></span>
+  </div>
+
+  <div id="tablero"></div>
+</body>
+</html>

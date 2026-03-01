@@ -1,0 +1,64 @@
+table,th,td {
+  border: 2px solid black;
+}
+
+img {
+  -webkit-user-drag: none;
+}
+
+.hidden {
+  opacity: 0;
+  transition: 0.20s ease;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: #f3f4f6;
+  text-align: center;
+  margin: 0;
+  padding: 20px;
+}
+
+h1 {
+  font-size: 2em;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+#controls {
+  margin-bottom: 20px;
+  font-size: 1.2em;
+}
+
+#controls label {
+  margin-right: 10px;
+}
+
+#difficulty {
+  font-size: 1em;
+  padding: 5px 10px;
+  border-radius: 8px;
+  border: 1px solid #aaa;
+}
+
+#start {
+  font-size: 1.1em;
+  padding: 8px 16px;
+  margin-left: 10px;
+  border: none;
+  border-radius: 10px;
+  background-color: #4CAF50;
+  color: white;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+#start:hover {
+  background-color: #43a047;
+}
+
+#info {
+  margin-bottom: 15px;
+  font-size: 1.2em;
+  color: #444;
+}
