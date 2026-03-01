@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pagina de Futbol</title>
+    <link rel="stylesheet" href="css/style.css"></head>
+<body>
+<header>
+    <h1>App Football</h1>
+    <nav class="Inicio">
+        <ul>
+            <li><button type="button" id="btn-matches">Partidos</button></li>
+            <li><button type="button" id="btn-teams">Equipos</button></li>
+            <li><button type="button" id="btn-leagues">Competiciones</button></li>
+            <li><button type="button" id="btn-fav-teams">Mis equipos favoritos</button></li>
+            <li><button type="button" id="btn-fav-leagues">Mis ligas favoritas</button></li>
+            <li><button type="button" id="btn-featured-leagues">Ligas destacadas</button></li>
+        </ul>
+    </nav>
+    <div class="Botones"id="user-actions">
+        <button type="button" id="btn-login">Iniciar Sesión</button>
+        <button type="button"id="btn-register">Registrarse</button>
+    </div>
+    <div id="fav-error"></div>
+</header>
+<main>
+    <section id="content">
+        <h2 id="content-title">Bienvenido</h2>
+        <div id="content-body">
+            <p>Selecciona una opción del menú para ver información.</p>
+        </div>
+    </section>
+<script type="module" src="js/app.js"></script> <!--El type= module es para que puedan importar funciones de otros archivos--> 
+</body>
+</html>
