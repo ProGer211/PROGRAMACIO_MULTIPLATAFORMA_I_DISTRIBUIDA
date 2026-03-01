@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>CRUD Tareas</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<div class="container">
+    <h1>Mis Tareas</h1>
+
+    <!-- FORMULARIO PARA CREAR -->
+    <div class="add-form">
+        <input type="text" id="nuevoTitulo" placeholder="Nueva tarea..." required>
+
+        <select id="nuevaPriority">
+            <option value="Alta">Alta</option>
+            <option value="Media" selected>Media</option>
+            <option value="Baja">Baja</option>
+        </select>
+
+        <label>
+            <input type="checkbox" id="nuevoCompleted"> Completada
+        </label>
+
+        <button onclick="crearTarea()">Añadir</button>
+    </div>
+
+    <button id="resetBtn" class="btn reset">Reset tareas</button>
+
+    <ul id="lista-tareas" class="task-list"></ul>
+</div>
+
+<script src="{{ url_for('static', filename='app.js') }}"></script>
+</body>
+</html>

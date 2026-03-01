@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Editar tarea</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<div class="container">
+    <h1>Editar tarea</h1>
+
+    <form action="/update/{{ task.id }}" method="POST" class="add-form">
+
+        <!-- TÍTULO -->
+        <input type="text" name="title" value="{{ task.titulo }}" required>
+
+        <!-- PRIORIDAD -->
+        <select name="priority">
+            <option value="Alta" {% if task.priority == "Alta" %}selected{% endif %}>Alta</option>
+            <option value="Media" {% if task.priority == "Media" %}selected{% endif %}>Media</option>
+            <option value="Baja" {% if task.priority == "Baja" %}selected{% endif %}>Baja</option>
+        </select>
+
+        <!-- COMPLETED -->
+        <label>
+            <input type="checkbox" name="completed"
+                   {% if task.completed %}checked{% endif %}> Completada
+        </label>
+
+        <button type="submit" class="btn save">Guardar</button>
+        <a href="/" class="btn cancel">Cancelar</a>
+    </form>
+
+</div>
+
+</body>
+</html>
