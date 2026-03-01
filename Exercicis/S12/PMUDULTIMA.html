@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <meta charset="UTF-8">
+<script>
+function loadNumber() {
+ var xhttp = new XMLHttpRequest();
+ xhttp.onreadystatechange = function() {
+ if (this.readyState == 4) {
+ message = JSON.parse(this.responseText).message;
+ document.getElementById("number").innerHTML = message;
+ }
+ };
+ xhttp.open("GET", "http://ubiwan.epsevg.upc.edu:3004/tasks/count", true);
+ xhttp.send();
+}
+</script>
+</head>
+<body>
+ <button type="button" onclick="loadNumber()">Get number of tasks</button>
+ <p>The number of tasks are <strong id="number"></strong></p>
+</body>
+</html> 
